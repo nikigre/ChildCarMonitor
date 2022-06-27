@@ -32,6 +32,9 @@
 //Reset button parameters
 #define ResetButton 2
 
+//Weight sensor
+#define WeightSensorPin 4
+
 DHT dht(DHTPIN, DHTTYPE);
 TinyGPSPlus gps;
 SoftwareSerial ss(gpsRXpin, gpsTXpin);
@@ -49,6 +52,7 @@ void setup() {
   ss.begin(gpsBaud);
   pinMode(BuzzerPin, OUTPUT);
   pinMode(ResetButton, INPUT_PULLUP);
+  pinMode(WeightSensorPin, INPUT_PULLUP);
   
   attachInterrupt(digitalPinToInterrupt(ResetButton), resetData, CHANGE); //We make an interrupt on pin so we can restart all parameters on click
   
@@ -56,6 +60,9 @@ void setup() {
 }
 
 void loop() {
+  if(digitalRead(WeightSensorPin)==LOW)
+    return;
+  
   sprintf(buff, "%d\twarningTempCounter > TempertureAlarm \t %d > %d", timer, warningTempCounter, TempertureAlarm);
   Serial.println(buff);
   if(warningTempCounter > TempertureAlarm) { //Check if we need to produse an alarm
