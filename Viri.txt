@@ -1,0 +1,7 @@
+https://create.arduino.cc/projecthub/pibots555/how-to-connect-dht11-sensor-with-arduino-uno-f4d239
+https://create.arduino.cc/projecthub/mdraber/controlling-8x8-dot-matrix-with-max7219-and-arduino-7314a7
+https://create.arduino.cc/projecthub/abdularbi17/ultrasonic-sensor-hc-sr04-with-arduino-tutorial-327ff6
+https://create.arduino.cc/projecthub/arduino_uno_guy/the-simplest-alarm-in-the-world-using-active-buzzer-35f570
+https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/
+https://create.arduino.cc/projecthub/rafitc/interrupts-basics-f475d5
+https://randomnerdtutorials.com/guide-to-neo-6m-gps-module-with-arduino/
